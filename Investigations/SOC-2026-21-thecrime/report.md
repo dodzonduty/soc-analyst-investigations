@@ -14,7 +14,6 @@ According to the lab scenario, there is a murder that happened, and you have bee
 | **Primary Destination**| The Nile Ritz-Carlton, Cairo | Last confirmed location of the victim using GPS |
 | **Secondary Destination** |The Mob Museum, Las Vegas | Intented location confirmed by discord chat with **rob1ns0n** |
 # Analysis
-## Analysis
 The investigation reveals a clear escalation ladder. The victim’s financial losses in trading triggered a "debt collection" response from the suspect (Shady Wahab). The victim’s behavior then shifted from "normal" to "evasive," characterized by checking into a hotel and booking international travel under the guise of meeting a third party ("rob1ns0n"). The murder likely occurred during this "evasion" phase, potentially at or near the last identified GPS coordinates. 
 # Verdict
 Confidence: High  
