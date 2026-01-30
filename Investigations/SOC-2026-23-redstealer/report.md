@@ -24,6 +24,24 @@ If executed within an enterprise environment, this malware could lead to:
 | **SHA256** |   248fcc901aff4e4b4c48c91e4d78a939bf681c9a1bc24addc3551b32768f907b | sha256 hash of the malware executable |
 # Analysis & MITRE ATT&CK Mapping
 ## Analysis 
+RedStealer is an infostealer malware designed to collect sensitive user data, primarily from web browsers.
+Once executed, it typically enumerates stored credentials, cookies, and system metadata, packages the collected data, and transmits it to a remote Command-and-Control (C2) server.
+Although no network traffic or execution artifacts were available in this case, the malware’s documented behavior strongly indicates intent for credential theft and data exfiltration.
 ## MITRE ATT&CK mapping 
+| Tactic              | Technique | Description                   |
+| ------------------- | --------- | ----------------------------- |
+| Initial Access      | T1204     | User Execution                |
+| Credential Access   | T1555.003 | Credentials from Web Browsers |
+| Collection          | T1005     | Data from Local System        |
+| Exfiltration        | T1041     | Exfiltration Over C2 Channel  |
+| Command and Control | T1071.001 | Web Protocols                 |
+
 # Verdict
+The analyzed file hash is associated with an infostealer malware capable of credential theft and data exfiltration.
+While no direct endpoint evidence was available, the malware’s known behavior indicates a high-risk threat if executed within an enterprise environment
 # Recommended Next Actions
+* Block known indicators associated with the malware family.
+* Hunt for similar hashes across endpoints.
+* Monitor outbound traffic for suspicious data exfiltration patterns.
+* Enforce application control to prevent unauthorized executable execution.
+* Conduct credential resets if execution is confirmed.
