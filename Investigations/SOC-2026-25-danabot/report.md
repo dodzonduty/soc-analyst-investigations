@@ -307,11 +307,11 @@ new ActiveXObject("Scripting.FileSystemObject").DeleteFile(WScript.ScriptFullNam
 ```
 The JS code begins by generating a randomized alphanumeric string to serve as a filename, obfuscating the payload on the disk. It uses the MSXML2.XMLHTTP object to download a binary payload (resources.dll) from the C2 domain `soundata.top`. The file is written to the user's `%TEMP%` directory via an `ADODB.Stream` object. Finally, the script executes the dropped DLL using `WScript.Shell` to provoke `rundll32.exe`, invoking the exported function start.
 ## MITRE ATT&CK mapping 
-Inital Access (TA0001) &rarr; Drive-by Compromise T1189
-Defense Evasion (TA0005) &rarr; Obfuscated Files or Information: Command Obfuscation T1027.010
-Defense Evasion (TA0005) &rarr; System Binary Proxy Execution: Rundll32 T1218.011
-Command and Control (TA0011) &rarr; Ingress Tool Transfer T1105
-Execution (TA0002) &rarr; Command and Scripting Interpreter: JavaScript T1059.007
+Inital Access (TA0001) &rarr; Drive-by Compromise T1189.  
+Defense Evasion (TA0005) &rarr; Obfuscated Files or Information: Command Obfuscation T1027.010.  
+Defense Evasion (TA0005) &rarr; System Binary Proxy Execution: Rundll32 T1218.011.  
+Command and Control (TA0011) &rarr; Ingress Tool Transfer T1105.  
+Execution (TA0002) &rarr; Command and Scripting Interpreter: JavaScript T1059.007.  
 # Verdict
 Verdict: Needs Investigation through EDR logs to determine the scope of downloaded DLL file.
 Confidence : High. 
